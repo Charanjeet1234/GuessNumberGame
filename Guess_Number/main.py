@@ -1,4 +1,7 @@
+
 import random
+import os
+import io
 
 # Take the random integer
 randomno = random.randint(1,50)
@@ -8,6 +11,8 @@ userguess = None
 
 while(userguess != randomno):
     userguess = int(input("Enter your guess: "))
+    # print(type(userguess))
+    # Count Gusses
     guesses += 1
 
     if userguess == randomno:
@@ -23,7 +28,14 @@ while(userguess != randomno):
             print("Please Enter Higher Number ")
 
 
+with open("hiscore.txt", "r") as f:
+    hiscore = int(f.read())
+ 
+print(os.listdir())
 
-# Count Gusses
+# if(guesses<hiscore):
+#     print("You have broken the record now")
+#     with open("hiscore.txt" , "w") as f:
+#         f.write(str(guesses))
 
     
