@@ -36,5 +36,3 @@ if(guesses<hiscore):
     print("Congrulations! You have broken the Record ")
     with open("hiscore.txt" , "w") as f:
         f.write(str(guesses))
-
-    
